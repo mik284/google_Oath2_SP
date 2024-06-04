@@ -25,6 +25,6 @@ spring:
         registration:
           google:
             client-id:
-            client-secret: G
+            client-secret:
 server:
   port: 8080
