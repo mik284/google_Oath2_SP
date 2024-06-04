@@ -1,4 +1,24 @@
 spring:
+  application:
+    name: googleOauth2
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dummyname
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  main:
+    allow-bean-definition-overriding: true
+
   security:
     oauth2:
       client:
@@ -6,3 +26,5 @@ spring:
           google:
             client-id: 390662600435-b11vp3ocv8g819mv8r5b942rnc3qldvk.apps.googleusercontent.com
             client-secret: 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
+server:
+  port: 8080
